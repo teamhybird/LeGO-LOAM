@@ -483,8 +483,8 @@ public:
 		        imuPitchLast = imuPitch[imuPointerFront] * ratioFront + imuPitch[imuPointerBack] * ratioBack;
 		    }
 
-		    transformTobeMapped[0] = 0.998 * transformTobeMapped[0] + 0.002 * imuPitchLast;
-		    transformTobeMapped[2] = 0.998 * transformTobeMapped[2] + 0.002 * imuRollLast;
+		    transformTobeMapped[0] = 0.5 * transformTobeMapped[0] + 0.5 * imuPitchLast;
+		    transformTobeMapped[2] = 0.5 * transformTobeMapped[2] + 0.5 * imuRollLast;
 		  }
 
 		for (int i = 0; i < 6; i++) {
