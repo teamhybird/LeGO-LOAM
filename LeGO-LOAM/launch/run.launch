@@ -1,4 +1,5 @@
 <launch>
+    <param name="/use_sim_time" value="$(env USE_SIM_TIME)" />
     
     <!--- TF -->
     <node pkg="tf" type="static_transform_publisher" name="camera_init_to_map"  args="0 0 0 1.570795   0        1.570795 /map    /camera_init 10" />
